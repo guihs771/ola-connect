@@ -1,9 +1,19 @@
 import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowDown, ArrowUpRight, Menu, X } from "lucide-react";
+import { ArrowUpRight, Gem, Menu, X } from "lucide-react";
 import logoBase64 from "./pedra-valiosa-logo.jpg.b64?raw";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Pedra Valiosa Marmoraria | Mármores e granitos em Paraopeba" },
+      { name: "description", content: "Bancadas, cozinhas, banheiros e projetos sob medida em mármores e granitos em Paraopeba e região." },
+      { property: "og:title", content: "Pedra Valiosa Marmoraria" },
+      { property: "og:description", content: "Soluções em mármores e granitos para transformar seus ambientes." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
