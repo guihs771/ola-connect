@@ -85,43 +85,24 @@ function Index() {
         </nav>
       )}
 
-      <section id="inicio" className="relative flex min-h-[720px] items-center justify-center overflow-hidden bg-[#26363b] px-5 py-24 text-center sm:min-h-[780px] sm:px-8">
+      <section id="inicio" className="relative flex min-h-[680px] items-center justify-center overflow-hidden bg-[#172327] px-5 py-24 text-center sm:min-h-[740px] sm:px-8">
         <img
-          src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2000&q=90"
-          alt="Ambiente sofisticado com bancada e acabamentos em pedra"
+          src="https://images.unsplash.com/photo-1694378061058-bb6532de3bba?auto=format&fit=crop&w=2400&q=90"
+          alt="Detalhe de uma chapa de mármore branco com veios naturais em tons de cinza"
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-[#172327]/70" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#172327]/25 via-transparent to-[#172327]/45" />
+        <div className="absolute inset-0 bg-[#101a1e]/65" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#101a1e]/25 via-transparent to-[#101a1e]/55" />
         <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center">
-          <p className="mb-7 text-[11px] font-medium uppercase tracking-[0.19em] text-white/90 sm:text-sm sm:tracking-[0.22em]">
-            Marmoraria de referência em Paraopeba e região
+          <p className="mb-6 text-[11px] font-semibold uppercase tracking-[0.28em] text-[#b9dce9] sm:text-xs">
+            Pedra Valiosa · Mármores e granitos
           </p>
-          <h1 className="max-w-4xl font-sans text-[clamp(2.35rem,7vw,5.4rem)] font-bold leading-[1.08] tracking-[-0.045em] text-white">
-            Especialista em soluções em mármores e granitos para transformar seus ambientes.
+          <h1 className="max-w-4xl font-sans text-[clamp(2.5rem,6.5vw,5.25rem)] font-semibold leading-[1.08] tracking-[-0.04em] text-white">
+            A beleza da <span className="text-[#b9dce9]">pedra natural</span> em cada detalhe.
           </h1>
-          <p className="mt-7 max-w-3xl text-base leading-7 text-white/90 sm:text-xl sm:leading-9">
-            Bancadas, cozinhas, banheiros e projetos sob medida, com cuidado em cada detalhe e acabamento.
+          <p className="mt-7 max-w-3xl text-base font-normal leading-8 text-white/95 sm:text-xl sm:leading-9">
+            Bancadas, cozinhas, banheiros e projetos sob medida em mármores e granitos, com acabamento cuidadoso para valorizar cada ambiente.
           </p>
-          <div className="mt-10 flex w-full max-w-xl flex-col gap-4 sm:max-w-2xl sm:flex-row">
-            <a
-              href={whatsapp}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex min-h-[64px] flex-1 items-center justify-center gap-3 bg-[#d9eaf0] px-7 py-5 text-[11px] font-bold uppercase tracking-[0.2em] text-[#26363b] transition hover:bg-[#fff0bd] sm:text-sm"
-            >
-              Fale conosco <ArrowUpRight size={18} />
-            </a>
-            <a
-              href="#servicos"
-              className="inline-flex min-h-[64px] flex-1 items-center justify-center gap-3 border border-white/90 bg-[#172327]/20 px-7 py-5 text-[11px] font-bold uppercase tracking-[0.2em] text-white transition hover:bg-white hover:text-[#26363b] sm:text-sm"
-            >
-              Nossos serviços <ArrowUpRight size={18} />
-            </a>
-          </div>
-          <a href="#sobre" className="mt-8 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/80 underline decoration-[#fff0bd] underline-offset-8 transition hover:text-white">
-            Conheça a Pedra Valiosa
-          </a>
         </div>
       </section>
 
