@@ -24,20 +24,32 @@ export const Route = createFileRoute("/")({
 
 const heroImages = [
   {
-    src: "https://images.squarespace-cdn.com/content/v1/61e08c560f8d2e16d5341172/c8c782f2-8140-4ec2-8f35-1caaec4b7f7f/kitchen%2B5.png?format=2000w",
-    alt: "Cozinha contemporânea com ilha e bancada em mármore natural",
-  },
-  {
     src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2200&q=90",
-    alt: "Ambiente residencial sofisticado com materiais naturais e pedra",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2200&q=90",
-    alt: "Projeto residencial contemporâneo com acabamentos em pedra",
+    alt: "Cozinha de alto padrão com ilha e acabamento em pedra natural",
   },
   {
     src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2200&q=90",
-    alt: "Interior elegante com superfícies em pedra natural",
+    alt: "Sala contemporânea com revestimentos naturais e mármore",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=2200&q=90",
+    alt: "Cozinha sofisticada com bancada ampla em pedra",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=2200&q=90",
+    alt: "Banheiro elegante com bancada e superfícies em pedra",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=2200&q=90",
+    alt: "Ambiente residencial de luxo com detalhes em mármore",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2200&q=90",
+    alt: "Interior moderno com materiais naturais e acabamento refinado",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2200&q=90&sat=-15",
+    alt: "Projeto de interiores com tons claros e pedra natural",
   },
 ];
 
@@ -92,7 +104,7 @@ function Index() {
     });
     const rotation = window.setInterval(() => {
       setActiveHeroImage((current) => (current + 1) % heroImages.length);
-    }, 5000);
+    }, 4000);
     return () => window.clearInterval(rotation);
   }, []);
 
@@ -106,13 +118,8 @@ function Index() {
           0% { opacity: 0; transform: translate3d(0, 34px, 0); filter: blur(5px); }
           100% { opacity: 1; transform: translate3d(0, 0, 0); filter: blur(0); }
         }
-        @keyframes pv-image-arrive {
-          0% { opacity: 0; transform: scale(1.12); }
-          100% { opacity: 1; transform: scale(1.08); }
-        }
         .pv-intro { animation: pv-rise-in 1000ms cubic-bezier(.2,.75,.25,1) both; }
         .pv-intro-delay { animation: pv-rise-in 1150ms cubic-bezier(.2,.75,.25,1) 220ms both; }
-        .pv-hero-image { animation: pv-image-arrive 1600ms cubic-bezier(.2,.75,.25,1) both; }
         .pv-hero-copy { animation: pv-rise-in 1200ms cubic-bezier(.2,.75,.25,1) 100ms both; }
         @media (prefers-reduced-motion: reduce) {
           .pv-intro, .pv-intro-delay { animation: none; }
@@ -162,7 +169,7 @@ function Index() {
             src={image.src}
             alt={image.alt}
             aria-hidden={index !== activeHeroImage}
-            className={`pv-hero-image absolute -top-[12%] left-0 h-[124%] w-full object-cover transition-opacity duration-[1600ms] ease-in-out will-change-[opacity,transform] ${index === activeHeroImage ? "opacity-100" : "opacity-0"}`}
+            className={`absolute -top-[12%] left-0 h-[124%] w-full object-cover transition-opacity duration-[1200ms] ease-in-out will-change-opacity ${index === activeHeroImage ? "opacity-100" : "opacity-0 pointer-events-none"}`}
             style={{ transform: `translate3d(0, ${heroOffset}px, 0) scale(1.08)` }}
           />
         ))}
