@@ -44,8 +44,8 @@ const heroImages = [
     alt: "Sala de estar com parede de mármore, piso de pedra e mesa em mármore",
   },
   {
-    src: "https://assets.zyrosite.com/qm5WpfWKjoitnbON/luxury-marble-interior-design-aCnqWrho9HozdQSw.png",
-    alt: "Showroom residencial com grandes placas de mármore nas paredes e no piso",
+    src: "https://pnagroup.ch/assets/service-cozinha-DrlJqZTA.jpg",
+    alt: "Cozinha sofisticada com ilha e backsplash em mármore branco com veios cinza",
   },
   {
     src: "https://www.kaunited.com/Content/uploads/2022880047/202212271539590d2b9b2e0a4a473b9b0f0430d803b35f.jpg",
