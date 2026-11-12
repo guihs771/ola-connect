@@ -5,6 +5,11 @@ import logoBase64 from "./pedra-valiosa-logo.jpg.b64?raw";
 
 export const Route = createFileRoute("/")({
   head: () => ({
+    links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" },
+    ],
     meta: [
       { title: "Pedra Valiosa Marmoraria | Mármores e granitos em Paraopeba" },
       { name: "description", content: "Bancadas, cozinhas, banheiros e projetos sob medida em mármores e granitos em Paraopeba e região." },
@@ -64,7 +69,7 @@ function Index() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <main className="min-h-screen bg-[#fbfcfa] text-[#26363b] selection:bg-[#fff0bd] selection:text-[#26363b]">
+    <main className="min-h-screen font-[Poppins,sans-serif] bg-[#fbfcfa] text-[#26363b] selection:bg-[#fff0bd] selection:text-[#26363b]">
       <header className="relative z-20 flex w-full items-center justify-between bg-black px-5 py-2 text-white sm:px-10 md:px-[max(calc((100vw-80rem)/2),2.5rem)]">
         <a href="#inicio" className="flex items-center gap-3" aria-label="Pedra Valiosa, início">
           <img
@@ -118,7 +123,7 @@ function Index() {
               <span className="h-px w-9 bg-[#b9dce9]" />
               Pedra Valiosa · Mármores e granitos
             </p>
-            <h1 className="max-w-2xl font-serif text-[clamp(2.8rem,6.2vw,5.6rem)] font-medium leading-[1.02] tracking-[-0.045em] text-white">
+            <h1 className="max-w-2xl text-[clamp(2.8rem,6.2vw,5.6rem)] font-medium leading-[1.02] tracking-[-0.045em] text-white">
               A beleza da <span className="italic text-[#b9dce9]">pedra natural</span> em cada detalhe.
             </h1>
             <p className="mt-7 max-w-xl border-l border-[#b9dce9]/70 pl-5 text-sm leading-7 text-white/95 sm:text-lg sm:leading-8">
@@ -132,7 +137,7 @@ function Index() {
         <div className="mx-auto grid max-w-7xl gap-8 px-6 py-16 sm:px-10 md:grid-cols-[0.65fr_1fr] md:items-center md:gap-20 md:py-24">
           <div>
             <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#82969d]">Nossa essência</p>
-            <h2 className="mt-4 font-serif text-4xl leading-tight tracking-[-0.04em] sm:text-5xl">A beleza está nos detalhes.</h2>
+            <h2 className="mt-4 text-4xl leading-tight tracking-[-0.04em] sm:text-5xl">A beleza está nos detalhes.</h2>
           </div>
           <div className="max-w-2xl">
             <p className="text-base leading-8 text-[#65767b]">
@@ -149,7 +154,7 @@ function Index() {
         <div className="mb-10 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
           <div>
             <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#82969d]">O que fazemos</p>
-            <h2 className="mt-3 font-serif text-4xl tracking-[-0.04em] sm:text-5xl">Soluções em pedra</h2>
+            <h2 className="mt-3 text-4xl tracking-[-0.04em] sm:text-5xl">Soluções em pedra</h2>
           </div>
           <p className="max-w-xs text-sm leading-6 text-[#7a898d]">Acabamentos que equilibram funcionalidade, beleza e personalidade.</p>
         </div>
@@ -162,7 +167,7 @@ function Index() {
               </div>
               <div className="flex items-start justify-between gap-4 border-b border-[#26363b]/15 py-5">
                 <div>
-                  <h3 className="font-serif text-2xl tracking-[-0.03em]">{service.title}</h3>
+                  <h3 className="text-2xl tracking-[-0.03em]">{service.title}</h3>
                   <p className="mt-2 max-w-xs text-sm leading-6 text-[#77868a]">{service.description}</p>
                 </div>
                 <ArrowUpRight size={18} className="mt-1 shrink-0 text-[#91aab2] transition group-hover:-translate-y-1 group-hover:translate-x-1" />
@@ -176,7 +181,7 @@ function Index() {
         <div className="mx-auto grid max-w-7xl items-center gap-8 px-6 py-14 sm:px-10 md:grid-cols-[1fr_1fr] md:py-20">
           <div className="max-w-lg">
             <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#647f88]">Seu projeto começa aqui</p>
-            <h2 className="mt-4 font-serif text-4xl leading-tight tracking-[-0.04em] sm:text-5xl">Vamos dar forma à sua ideia?</h2>
+            <h2 className="mt-4 text-4xl leading-tight tracking-[-0.04em] sm:text-5xl">Vamos dar forma à sua ideia?</h2>
           </div>
           <div className="md:justify-self-end">
             <p className="mb-6 max-w-sm text-sm leading-7 text-[#5e747b]">Conte um pouco sobre o que você imagina. Será um prazer conversar sobre seu projeto.</p>
@@ -192,7 +197,7 @@ function Index() {
           <div>
             <div className="flex items-center gap-3">
               <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/25"><Gem size={18} strokeWidth={1.5} /></span>
-              <span className="font-serif text-2xl tracking-[-0.04em]">Pedra Valiosa</span>
+              <span className="text-2xl tracking-[-0.04em]">Pedra Valiosa</span>
             </div>
             <p className="mt-4 text-[10px] font-semibold uppercase tracking-[0.23em] text-white/55">Marmoraria · Paraopeba, MG</p>
           </div>
