@@ -67,7 +67,8 @@ const services = [
 
 function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [heroOffset, setHeroOffset] = useState(0);\n  const [activeHeroImage, setActiveHeroImage] = useState(0);
+  const [heroOffset, setHeroOffset] = useState(0);
+  const [activeHeroImage, setActiveHeroImage] = useState(0);
 
   useEffect(() => {
     let frame = 0;
