@@ -180,9 +180,11 @@ function Index() {
             <div className="relative">
               <div className="relative min-h-[340px] overflow-hidden rounded-2xl bg-[#26363b] sm:min-h-[440px]">
                 <img
-                  src="https://tiboston.com/images/template/installation.jpg"
-                  alt="Instalador com uniforme de trabalho e luvas de proteção posicionando uma bancada de mármore em uma cozinha sofisticada"
-                  loading="lazy"
+                  src="https://images.pexels.com/photos/29181494/pexels-photo-29181494.jpeg?auto=compress&cs=tinysrgb&w=1800"
+                  alt="Profissional uniformizado com equipamentos de segurança trabalhando no acabamento de revestimento em uma obra interna"
+                  loading="eager"
+                  decoding="async"
+                  referrerPolicy="no-referrer"
                   className="absolute inset-0 h-full w-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#172327]/75 via-[#172327]/10 to-transparent" />
