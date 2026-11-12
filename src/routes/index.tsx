@@ -128,14 +128,8 @@ function Index() {
         </div>
       </section>
 
-      <section id="servicos" className="relative z-10 -mt-6 bg-[#f2f6f4] px-6 pb-16 pt-8 sm:px-10 md:-mt-10 md:pb-20 md:pt-10">
+      <section id="servicos" className="relative z-10 -mt-16 bg-[#f2f6f4] px-6 pb-16 pt-6 sm:px-10 md:-mt-20 md:pb-20 md:pt-8">
         <div className="mx-auto max-w-7xl">
-          <div className="mx-auto mb-12 max-w-2xl text-center">
-            <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#82969d]">Pedra Valiosa Marmoraria</p>
-            <h2 className="mt-3 text-4xl tracking-[-0.04em] sm:text-5xl">Soluções completas em pedras naturais</h2>
-            <p className="mt-4 text-sm leading-7 text-[#77868a]">Serviços pensados para unir beleza, funcionalidade e acabamento de qualidade em cada ambiente.</p>
-          </div>
-
           <div className="grid items-center gap-4 md:grid-cols-3 md:gap-0">
             <article className="flex min-h-[300px] flex-col items-center justify-center rounded-2xl border border-[#26363b]/[0.08] bg-white px-7 py-9 text-center shadow-[0_12px_35px_rgba(38,54,59,0.07)] transition duration-300 hover:-translate-y-1">
               <span className="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-[#e3f0f4] text-[#526e78]"><ChefHat size={25} strokeWidth={1.7} /></span>
