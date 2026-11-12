@@ -102,25 +102,29 @@ function Index() {
         </nav>
       )}
 
-      <section id="inicio" className="relative flex min-h-[680px] items-center justify-center overflow-hidden bg-[#172327] px-5 py-24 text-center sm:min-h-[740px] sm:px-8">
+      <section id="inicio" className="relative flex min-h-[680px] items-center overflow-hidden bg-[#172327] px-6 py-24 text-left sm:min-h-[740px] sm:px-10 lg:px-16">
         <img
           src="https://images.squarespace-cdn.com/content/v1/61e08c560f8d2e16d5341172/c8c782f2-8140-4ec2-8f35-1caaec4b7f7f/kitchen%2B5.png?format=2000w"
           alt="Cozinha contemporânea com ilha e bancada em mármore natural"
           className="absolute -top-[12%] left-0 h-[124%] w-full object-cover will-change-transform"
           style={{ transform: `translate3d(0, ${heroOffset}px, 0) scale(1.08)` }}
         />
-        <div className="absolute inset-0 bg-[#101a1e]/55" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#101a1e]/20 via-transparent to-[#101a1e]/50" />
-        <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center">
-          <p className="mb-6 text-[11px] font-semibold uppercase tracking-[0.28em] text-[#b9dce9] sm:text-xs">
-            Pedra Valiosa · Mármores e granitos
-          </p>
-          <h1 className="max-w-4xl font-sans text-[clamp(2.5rem,6.5vw,5.25rem)] font-semibold leading-[1.08] tracking-[-0.04em] text-white">
-            A beleza da <span className="text-[#b9dce9]">pedra natural</span> em cada detalhe.
-          </h1>
-          <p className="mt-7 max-w-3xl text-base font-normal leading-8 text-white/95 sm:text-xl sm:leading-9">
-            Bancadas, cozinhas, banheiros e projetos sob medida em mármores e granitos, com acabamento cuidadoso para valorizar cada ambiente.
-          </p>
+        <div className="absolute inset-0 bg-[#101a1e]/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#101a1e]/75 via-[#101a1e]/35 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#101a1e]/25 via-transparent to-transparent" />
+        <div className="relative z-10 mx-auto w-full max-w-7xl">
+          <div className="max-w-2xl">
+            <p className="mb-7 flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.3em] text-[#b9dce9] sm:text-xs">
+              <span className="h-px w-9 bg-[#b9dce9]" />
+              Pedra Valiosa · Mármores e granitos
+            </p>
+            <h1 className="max-w-2xl font-serif text-[clamp(2.8rem,6.2vw,5.6rem)] font-medium leading-[1.02] tracking-[-0.045em] text-white">
+              A beleza da <span className="italic text-[#b9dce9]">pedra natural</span> em cada detalhe.
+            </h1>
+            <p className="mt-7 max-w-xl border-l border-[#b9dce9]/70 pl-5 text-sm leading-7 text-white/95 sm:text-lg sm:leading-8">
+              Bancadas, cozinhas, banheiros e projetos sob medida em mármores e granitos, com acabamento cuidadoso para valorizar cada ambiente.
+            </p>
+          </div>
         </div>
       </section>
 
