@@ -102,11 +102,17 @@ function Index() {
     <main className="min-h-screen font-[Poppins,sans-serif] bg-[#fbfcfa] text-[#26363b] selection:bg-[#fff0bd] selection:text-[#26363b]">
       <style>{`
         @keyframes pv-rise-in {
-          from { opacity: 0; transform: translate3d(0, 24px, 0); }
-          to { opacity: 1; transform: translate3d(0, 0, 0); }
+          0% { opacity: 0; transform: translate3d(0, 34px, 0); filter: blur(5px); }
+          100% { opacity: 1; transform: translate3d(0, 0, 0); filter: blur(0); }
         }
-        .pv-intro { animation: pv-rise-in 950ms cubic-bezier(.2,.75,.25,1) both; }
-        .pv-intro-delay { animation: pv-rise-in 1100ms cubic-bezier(.2,.75,.25,1) 180ms both; }
+        @keyframes pv-image-arrive {
+          0% { opacity: 0; transform: scale(1.12); }
+          100% { opacity: 1; transform: scale(1.08); }
+        }
+        .pv-intro { animation: pv-rise-in 1000ms cubic-bezier(.2,.75,.25,1) both; }
+        .pv-intro-delay { animation: pv-rise-in 1150ms cubic-bezier(.2,.75,.25,1) 220ms both; }
+        .pv-hero-image { animation: pv-image-arrive 1600ms cubic-bezier(.2,.75,.25,1) both; }
+        .pv-hero-copy { animation: pv-rise-in 1200ms cubic-bezier(.2,.75,.25,1) 100ms both; }
         @media (prefers-reduced-motion: reduce) {
           .pv-intro, .pv-intro-delay { animation: none; }
         }
@@ -155,7 +161,7 @@ function Index() {
             src={image.src}
             alt={image.alt}
             aria-hidden={index !== activeHeroImage}
-            className={`absolute -top-[12%] left-0 h-[124%] w-full object-cover transition-opacity duration-[1400ms] ease-in-out will-change-[opacity,transform] ${index === activeHeroImage ? "opacity-100" : "opacity-0"}`}
+            className={`pv-hero-image absolute -top-[12%] left-0 h-[124%] w-full object-cover transition-opacity duration-[1600ms] ease-in-out will-change-[opacity,transform] ${index === activeHeroImage ? "opacity-100" : "opacity-0"}`}
             style={{ transform: `translate3d(0, ${heroOffset}px, 0) scale(1.08)` }}
           />
         ))}
@@ -163,7 +169,7 @@ function Index() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#101a1e]/75 via-[#101a1e]/35 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#101a1e]/25 via-transparent to-transparent" />
         <div className="relative z-10 mx-auto w-full max-w-7xl">
-          <div className="max-w-2xl">
+          <div className="pv-hero-copy max-w-2xl">
             <p className="pv-intro mb-7 flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.3em] text-[#b9dce9] sm:text-xs">
               <span className="h-px w-9 bg-[#b9dce9]" />
               Pedra Valiosa · Mármores e granitos
