@@ -27,30 +27,6 @@ const heroImage = {
   alt: "Cozinha contemporânea de alto padrão com ilha central, bancada e backsplash em mármore",
 };
 
-const services = [
-  {
-    number: "01",
-    title: "Cozinhas",
-    description: "Bancadas, ilhas e acabamentos pensados para acompanhar sua rotina.",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85",
-    alt: "Cozinha contemporânea com bancada em pedra",
-  },
-  {
-    number: "02",
-    title: "Banheiros",
-    description: "Cubas, nichos e superfícies que unem praticidade e elegância.",
-    image: "https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1200&q=85",
-    alt: "Banheiro elegante com acabamento em pedra",
-  },
-  {
-    number: "03",
-    title: "Projetos especiais",
-    description: "Soluções sob medida para dar personalidade a cada ambiente.",
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85",
-    alt: "Ambiente residencial com materiais naturais",
-  },
-];
-
 function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [heroOffset, setHeroOffset] = useState(0);
@@ -186,7 +162,7 @@ function Index() {
             <article className="relative z-10 flex min-h-[310px] flex-col items-center justify-center rounded-2xl border border-[#a9d4e2] bg-[#b9dce9] px-7 py-10 text-center shadow-[0_18px_45px_rgba(75,126,143,0.2)] md:scale-[1.04]">
               <span className="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-white text-[#476773]"><Bath size={25} strokeWidth={1.7} /></span>
               <h3 className="text-xl font-semibold tracking-[-0.03em] text-[#26363b]">Banheiros sofisticados</h3>
-              <p className="mt-3 max-w-xs text-sm leading-6 text-[#49636c]">Nichos, lavatórios, nichos e revestimentos com beleza e praticidade.</p>
+              <p className="mt-3 max-w-xs text-sm leading-6 text-[#49636c]">Cubas, lavatórios e revestimentos que unem beleza e praticidade.</p>
             </article>
             <article className="flex min-h-[270px] flex-col items-center justify-center rounded-2xl border border-[#26363b]/[0.07] bg-white px-7 py-9 text-center shadow-[0_12px_35px_rgba(38,54,59,0.06)] transition duration-300 hover:-translate-y-1">
               <span className="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-[#b9dce9] text-[#26363b]"><PanelsTopLeft size={25} strokeWidth={1.7} /></span>
