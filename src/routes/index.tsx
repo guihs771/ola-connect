@@ -128,7 +128,7 @@ function Index() {
         </div>
       </section>
 
-      <section id="servicos" className="relative z-10 bg-[#f2f6f4] px-6 py-16 sm:px-10 md:py-20">
+      <section id="servicos" className="relative z-10 -mt-6 bg-[#f2f6f4] px-6 pb-16 pt-8 sm:px-10 md:-mt-10 md:pb-20 md:pt-10">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto mb-12 max-w-2xl text-center">
             <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#82969d]">Pedra Valiosa Marmoraria</p>
