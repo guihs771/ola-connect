@@ -82,47 +82,43 @@ function Index() {
         </nav>
       )}
 
-      <section id="inicio" className="mx-auto grid max-w-7xl items-center gap-10 px-6 pb-16 pt-8 sm:px-10 md:grid-cols-[0.88fr_1.12fr] md:gap-14 md:pb-24 md:pt-10">
-        <div className="order-2 max-w-xl md:order-1">
-          <div className="mb-7 flex items-center gap-3">
-            <span className="h-px w-9 bg-[#d7bd75]" />
-            <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#73868c]">Beleza que permanece</p>
-          </div>
-          <h1 className="font-serif text-[clamp(3.3rem,6vw,5.7rem)] leading-[0.98] tracking-[-0.055em] text-[#26363b]">
-            Especialista em soluções em <span className="italic text-[#7fa9b8]">mármores e granitos</span> para transformar seus ambientes.
-          </h1>
-          <p className="mt-7 max-w-md text-[15px] leading-7 text-[#68787d]">
-            Bancadas, cozinhas, banheiros e projetos sob medida com atenção aos detalhes e acabamentos que valorizam cada espaço.
+      <section id="inicio" className="relative flex min-h-[720px] items-center justify-center overflow-hidden bg-[#26363b] px-5 py-24 text-center sm:min-h-[780px] sm:px-8">
+        <img
+          src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2000&q=90"
+          alt="Ambiente sofisticado com bancada e acabamentos em pedra"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-[#172327]/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#172327]/25 via-transparent to-[#172327]/45" />
+        <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center">
+          <p className="mb-7 text-[11px] font-medium uppercase tracking-[0.19em] text-white/90 sm:text-sm sm:tracking-[0.22em]">
+            Marmoraria de referência em Paraopeba e região
           </p>
-          <div className="mt-9 flex flex-wrap items-center gap-3">
-            <a href="#servicos" className="inline-flex items-center gap-3 bg-[#26363b] px-6 py-4 text-[10px] font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#405b64]">
-              Nossos serviços <ArrowUpRight size={15} />
+          <h1 className="max-w-4xl font-sans text-[clamp(2.35rem,7vw,5.4rem)] font-bold leading-[1.08] tracking-[-0.045em] text-white">
+            Especialista em soluções em mármores e granitos para transformar seus ambientes.
+          </h1>
+          <p className="mt-7 max-w-3xl text-base leading-7 text-white/90 sm:text-xl sm:leading-9">
+            Bancadas, cozinhas, banheiros e projetos sob medida, com cuidado em cada detalhe e acabamento.
+          </p>
+          <div className="mt-10 flex w-full max-w-xl flex-col gap-4 sm:max-w-2xl sm:flex-row">
+            <a
+              href={whatsapp}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex min-h-[64px] flex-1 items-center justify-center gap-3 bg-[#d9eaf0] px-7 py-5 text-[11px] font-bold uppercase tracking-[0.2em] text-[#26363b] transition hover:bg-[#fff0bd] sm:text-sm"
+            >
+              Fale conosco <ArrowUpRight size={18} />
             </a>
-            <a href="#contato" className="inline-flex items-center gap-3 border border-[#26363b]/25 px-6 py-4 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#26363b] transition hover:border-[#26363b]">
-              Contato <ArrowUpRight size={15} />
+            <a
+              href="#servicos"
+              className="inline-flex min-h-[64px] flex-1 items-center justify-center gap-3 border border-white/90 bg-[#172327]/20 px-7 py-5 text-[11px] font-bold uppercase tracking-[0.2em] text-white transition hover:bg-white hover:text-[#26363b] sm:text-sm"
+            >
+              Nossos serviços <ArrowUpRight size={18} />
             </a>
-            <a href={whatsapp} target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 bg-[#fff0bd] px-6 py-4 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#26363b] transition hover:bg-[#f5e3a9]">
-              Fale conosco <ArrowUpRight size={15} />
-            </a>
           </div>
-          <div className="mt-14 flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#93a0a3]">
-            <ArrowDown size={14} /> Feito para fazer parte da sua história
-          </div>
-        </div>
-
-        <div className="order-1 relative md:order-2">
-          <div className="absolute -right-3 -top-3 h-24 w-24 bg-[#fff0bd] sm:-right-5 sm:-top-5 sm:h-32 sm:w-32" />
-          <div className="relative aspect-[5/4] overflow-hidden bg-[#e8eeeb]">
-            <img
-              src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1800&q=90"
-              alt="Interior contemporâneo com bancada e revestimentos em pedra"
-              className="h-full w-full object-cover"
-            />
-          </div>
-          <div className="absolute -bottom-5 left-5 bg-[#fbfcfa] px-5 py-4 shadow-sm sm:bottom-6 sm:-left-7 sm:px-7">
-            <p className="font-serif text-xl italic text-[#26363b]">Matéria. Forma. Essência.</p>
-            <p className="mt-1 text-[9px] font-semibold uppercase tracking-[0.2em] text-[#849297]">Pedra Valiosa Marmoraria</p>
-          </div>
+          <a href="#sobre" className="mt-8 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/80 underline decoration-[#fff0bd] underline-offset-8 transition hover:text-white">
+            Conheça a Pedra Valiosa
+          </a>
         </div>
       </section>
 
