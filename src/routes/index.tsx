@@ -48,7 +48,7 @@ const heroImages = [
     alt: "Interior moderno com materiais naturais e acabamento refinado",
   },
   {
-    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2200&q=90&sat=-15",
+    src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2200&q=90",
     alt: "Projeto de interiores com tons claros e pedra natural",
   },
 ];
