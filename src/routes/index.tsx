@@ -57,10 +57,11 @@ function Index() {
           />
         </a>
 
-        <nav className="hidden items-center gap-3 md:flex">
-          <a href="#contato" className="border border-white/35 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.14em] text-white/85 transition hover:border-white hover:text-white">Contato</a>
-          <a href="#servicos" className="border border-[#26363b]/20 px-5 py-3 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#52646a] transition hover:border-[#26363b] hover:text-[#26363b]">Serviços</a>
-          <a href={whatsapp} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#d9eaf0] px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#26363b] transition hover:bg-[#fff0bd]">Fale conosco <ArrowUpRight size={14} /></a>
+        <nav className="hidden items-center gap-8 md:flex">
+          <a href="#sobre" className="text-[12px] font-bold uppercase tracking-[0.02em] text-white transition hover:text-[#b9dce9]">Sobre nós</a>
+          <a href="#servicos" className="text-[12px] font-bold uppercase tracking-[0.02em] text-white transition hover:text-[#b9dce9]">Serviços</a>
+          <a href="#contato" className="text-[12px] font-bold uppercase tracking-[0.02em] text-white transition hover:text-[#b9dce9]">Contato</a>
+          <a href={whatsapp} target="_blank" rel="noreferrer" className="inline-flex min-h-[38px] items-center justify-center rounded-md bg-[#075d1b] px-6 py-2 text-[12px] font-extrabold uppercase tracking-[0.12em] text-white transition hover:bg-[#0a7424]">Orçamento</a>
         </nav>
 
         <button
