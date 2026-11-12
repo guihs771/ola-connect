@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowUpRight, Gem, Menu, X } from "lucide-react";
 import logoBase64 from "./pedra-valiosa-logo.jpg.b64?raw";
@@ -43,6 +43,23 @@ const services = [
 
 function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [heroOffset, setHeroOffset] = useState(0);
+
+  useEffect(() => {
+    let frame = 0;
+    const handleScroll = () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        setHeroOffset(Math.min(window.scrollY * 0.18, 115));
+      });
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      cancelAnimationFrame(frame);
+    };
+  }, []);
+
   const whatsapp = "https://wa.me/?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20com%20a%20Pedra%20Valiosa%20Marmoraria.";
   const closeMenu = () => setMenuOpen(false);
 
@@ -87,12 +104,13 @@ function Index() {
 
       <section id="inicio" className="relative flex min-h-[680px] items-center justify-center overflow-hidden bg-[#172327] px-5 py-24 text-center sm:min-h-[740px] sm:px-8">
         <img
-          src="https://images.unsplash.com/photo-1694378061058-bb6532de3bba?auto=format&fit=crop&w=2400&q=90"
-          alt="Detalhe de uma chapa de mármore branco com veios naturais em tons de cinza"
-          className="absolute inset-0 h-full w-full object-cover"
+          src="https://images.squarespace-cdn.com/content/v1/61e08c560f8d2e16d5341172/c8c782f2-8140-4ec2-8f35-1caaec4b7f7f/kitchen%2B5.png?format=2000w"
+          alt="Cozinha contemporânea com ilha e bancada em mármore natural"
+          className="absolute -top-[12%] left-0 h-[124%] w-full object-cover will-change-transform"
+          style={{ transform: `translate3d(0, ${heroOffset}px, 0) scale(1.08)` }}
         />
-        <div className="absolute inset-0 bg-[#101a1e]/65" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#101a1e]/25 via-transparent to-[#101a1e]/55" />
+        <div className="absolute inset-0 bg-[#101a1e]/55" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#101a1e]/20 via-transparent to-[#101a1e]/50" />
         <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center">
           <p className="mb-6 text-[11px] font-semibold uppercase tracking-[0.28em] text-[#b9dce9] sm:text-xs">
             Pedra Valiosa · Mármores e granitos
