@@ -22,6 +22,25 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
+const heroImages = [
+  {
+    src: "https://images.squarespace-cdn.com/content/v1/61e08c560f8d2e16d5341172/c8c782f2-8140-4ec2-8f35-1caaec4b7f7f/kitchen%2B5.png?format=2000w",
+    alt: "Cozinha contemporânea com ilha e bancada em mármore natural",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2200&q=90",
+    alt: "Ambiente residencial sofisticado com materiais naturais e pedra",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2200&q=90",
+    alt: "Projeto residencial contemporâneo com acabamentos em pedra",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2200&q=90",
+    alt: "Interior elegante com superfícies em pedra natural",
+  },
+];
+
 const services = [
   {
     number: "01",
@@ -48,7 +67,7 @@ const services = [
 
 function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [heroOffset, setHeroOffset] = useState(0);
+  const [heroOffset, setHeroOffset] = useState(0);\n  const [activeHeroImage, setActiveHeroImage] = useState(0);
 
   useEffect(() => {
     let frame = 0;
@@ -65,11 +84,33 @@ function Index() {
     };
   }, []);
 
+  useEffect(() => {
+    heroImages.forEach(({ src }) => {
+      const image = new Image();
+      image.src = src;
+    });
+    const rotation = window.setInterval(() => {
+      setActiveHeroImage((current) => (current + 1) % heroImages.length);
+    }, 5000);
+    return () => window.clearInterval(rotation);
+  }, []);
+
   const whatsapp = "https://wa.me/?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20com%20a%20Pedra%20Valiosa%20Marmoraria.";
   const closeMenu = () => setMenuOpen(false);
 
   return (
     <main className="min-h-screen font-[Poppins,sans-serif] bg-[#fbfcfa] text-[#26363b] selection:bg-[#fff0bd] selection:text-[#26363b]">
+      <style>{`
+        @keyframes pv-rise-in {
+          from { opacity: 0; transform: translate3d(0, 24px, 0); }
+          to { opacity: 1; transform: translate3d(0, 0, 0); }
+        }
+        .pv-intro { animation: pv-rise-in 950ms cubic-bezier(.2,.75,.25,1) both; }
+        .pv-intro-delay { animation: pv-rise-in 1100ms cubic-bezier(.2,.75,.25,1) 180ms both; }
+        @media (prefers-reduced-motion: reduce) {
+          .pv-intro, .pv-intro-delay { animation: none; }
+        }
+      `}</style>
       <header className="relative z-20 flex w-full items-center justify-between bg-black px-5 py-2 text-white sm:px-10 md:px-[max(calc((100vw-80rem)/2),2.5rem)]">
         <a href="#inicio" className="flex items-center gap-3" aria-label="Pedra Valiosa, início">
           <img
@@ -108,25 +149,29 @@ function Index() {
       )}
 
       <section id="inicio" className="relative flex min-h-[680px] items-center overflow-hidden bg-[#172327] px-6 py-24 text-left sm:min-h-[740px] sm:px-10 lg:px-16">
-        <img
-          src="https://images.squarespace-cdn.com/content/v1/61e08c560f8d2e16d5341172/c8c782f2-8140-4ec2-8f35-1caaec4b7f7f/kitchen%2B5.png?format=2000w"
-          alt="Cozinha contemporânea com ilha e bancada em mármore natural"
-          className="absolute -top-[12%] left-0 h-[124%] w-full object-cover will-change-transform"
-          style={{ transform: `translate3d(0, ${heroOffset}px, 0) scale(1.08)` }}
-        />
+        {heroImages.map((image, index) => (
+          <img
+            key={image.src}
+            src={image.src}
+            alt={image.alt}
+            aria-hidden={index !== activeHeroImage}
+            className={`absolute -top-[12%] left-0 h-[124%] w-full object-cover transition-opacity duration-[1400ms] ease-in-out will-change-[opacity,transform] ${index === activeHeroImage ? "opacity-100" : "opacity-0"}`}
+            style={{ transform: `translate3d(0, ${heroOffset}px, 0) scale(1.08)` }}
+          />
+        ))}
         <div className="absolute inset-0 bg-[#101a1e]/30" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#101a1e]/75 via-[#101a1e]/35 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#101a1e]/25 via-transparent to-transparent" />
         <div className="relative z-10 mx-auto w-full max-w-7xl">
           <div className="max-w-2xl">
-            <p className="mb-7 flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.3em] text-[#b9dce9] sm:text-xs">
+            <p className="pv-intro mb-7 flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.3em] text-[#b9dce9] sm:text-xs">
               <span className="h-px w-9 bg-[#b9dce9]" />
               Pedra Valiosa · Mármores e granitos
             </p>
-            <h1 className="max-w-2xl text-[clamp(2.8rem,6.2vw,5.6rem)] font-medium leading-[1.02] tracking-[-0.045em] text-white">
+            <h1 className="pv-intro-delay max-w-2xl text-[clamp(2.8rem,6.2vw,5.6rem)] font-medium leading-[1.02] tracking-[-0.045em] text-white">
               A beleza da <span className="italic text-[#b9dce9]">pedra natural</span> em cada detalhe.
             </h1>
-            <p className="mt-7 max-w-xl border-l border-[#b9dce9]/70 pl-5 text-sm leading-7 text-white/95 sm:text-lg sm:leading-8">
+            <p className="pv-intro-delay mt-7 max-w-xl border-l border-[#b9dce9]/70 pl-5 text-sm leading-7 text-white/95 sm:text-lg sm:leading-8">
               Bancadas, cozinhas, banheiros e projetos sob medida em mármores e granitos, com acabamento cuidadoso para valorizar cada ambiente.
             </p>
           </div>
