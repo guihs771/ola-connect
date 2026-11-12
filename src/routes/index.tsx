@@ -48,19 +48,19 @@ function Index() {
 
   return (
     <main className="min-h-screen bg-[#fbfcfa] text-[#26363b] selection:bg-[#fff0bd] selection:text-[#26363b]">
-      <header className="relative z-20 mx-auto flex max-w-7xl items-center justify-between bg-black px-6 py-5 text-white sm:px-10">
+      <header className="relative z-20 flex w-full items-center justify-between bg-black px-5 py-2 text-white sm:px-10 md:px-[max(calc((100vw-80rem)/2),2.5rem)]">
         <a href="#inicio" className="flex items-center gap-3" aria-label="Pedra Valiosa, início">
           <img
             src={`data:image/jpeg;base64,${logoBase64.trim()}`}
             alt="Pedra Valiosa Mármores"
-            className="h-auto w-[230px] max-w-[58vw] object-contain sm:w-[290px]"
+            className="h-auto w-[190px] max-w-[48vw] object-contain sm:w-[220px]"
           />
         </a>
 
         <nav className="hidden items-center gap-3 md:flex">
-          <a href="#contato" className="border border-white/35 px-5 py-3 text-[10px] font-semibold uppercase tracking-[0.14em] text-white/85 transition hover:border-white hover:text-white">Contato</a>
+          <a href="#contato" className="border border-white/35 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.14em] text-white/85 transition hover:border-white hover:text-white">Contato</a>
           <a href="#servicos" className="border border-[#26363b]/20 px-5 py-3 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#52646a] transition hover:border-[#26363b] hover:text-[#26363b]">Serviços</a>
-          <a href={whatsapp} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#d9eaf0] px-5 py-3 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#26363b] transition hover:bg-[#fff0bd]">Fale conosco <ArrowUpRight size={14} /></a>
+          <a href={whatsapp} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#d9eaf0] px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#26363b] transition hover:bg-[#fff0bd]">Fale conosco <ArrowUpRight size={14} /></a>
         </nav>
 
         <button
