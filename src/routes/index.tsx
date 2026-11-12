@@ -180,8 +180,8 @@ function Index() {
             <div className="relative">
               <div className="relative min-h-[340px] overflow-hidden rounded-2xl bg-[#26363b] sm:min-h-[440px]">
                 <img
-                  src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=90"
-                  alt="Ambiente contemporâneo com acabamentos em pedra natural"
+                  src="https://images.pexels.com/photos/14225905/pexels-photo-14225905.jpeg?auto=compress&cs=tinysrgb&w=1800"
+                  alt="Dois profissionais trabalhando no corte e acabamento de uma chapa de mármore em oficina"
                   loading="lazy"
                   className="absolute inset-0 h-full w-full object-cover"
                 />
