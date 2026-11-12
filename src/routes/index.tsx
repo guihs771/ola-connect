@@ -180,8 +180,8 @@ function Index() {
             <div className="relative">
               <div className="relative min-h-[340px] overflow-hidden rounded-2xl bg-[#26363b] sm:min-h-[440px]">
                 <img
-                  src="https://www.ernesto.it/api/v1/medias/get/md-943ed4bd-4be9-4d4f-b829-fe758b64b37c/0.5"
-                  alt="Profissionais com capacetes e luvas de proteção instalando uma bancada de mármore em uma cozinha sofisticada"
+                  src="https://tiboston.com/images/template/installation.jpg"
+                  alt="Instalador com uniforme de trabalho e luvas de proteção posicionando uma bancada de mármore em uma cozinha sofisticada"
                   loading="lazy"
                   className="absolute inset-0 h-full w-full object-cover"
                 />
