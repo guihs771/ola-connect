@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowUpRight, Gem, Menu, X, ChefHat, Bath, PanelsTopLeft, Ruler, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowUpRight, Gem, Menu, X, ChefHat, Bath, PanelsTopLeft } from "lucide-react";
 import logoBase64 from "./pedra-valiosa-logo.jpg.b64?raw";
 
 export const Route = createFileRoute("/")({
@@ -128,6 +128,39 @@ function Index() {
         </div>
       </section>
 
+      <section id="servicos" className="relative z-10 bg-[#f2f6f4] px-6 py-16 sm:px-10 md:py-20">
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto mb-12 max-w-2xl text-center">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#82969d]">Pedra Valiosa Marmoraria</p>
+            <h2 className="mt-3 text-4xl tracking-[-0.04em] sm:text-5xl">Soluções completas em pedras naturais</h2>
+            <p className="mt-4 text-sm leading-7 text-[#77868a]">Serviços pensados para unir beleza, funcionalidade e acabamento de qualidade em cada ambiente.</p>
+          </div>
+
+          <div className="grid items-center gap-4 md:grid-cols-3 md:gap-0">
+            <article className="flex min-h-[300px] flex-col items-center justify-center rounded-2xl border border-[#26363b]/[0.08] bg-white px-7 py-9 text-center shadow-[0_12px_35px_rgba(38,54,59,0.07)] transition duration-300 hover:-translate-y-1">
+              <span className="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-[#e3f0f4] text-[#526e78]"><ChefHat size={25} strokeWidth={1.7} /></span>
+              <h3 className="text-xl font-semibold tracking-[-0.03em]">Cozinhas e espaços gourmet</h3>
+              <p className="mt-3 max-w-xs text-sm leading-6 text-[#7d8b8f]">Bancadas e ilhas sob medida, com aproveitamento inteligente do espaço e acabamento elegante.</p>
+              <span className="mt-5 border-t border-[#26363b]/10 pt-4 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#71878f]">Projeto personalizado</span>
+            </article>
+
+            <article className="relative z-10 flex min-h-[340px] flex-col items-center justify-center rounded-2xl border border-[#a9cbd5] bg-[#26363b] px-7 py-10 text-center shadow-[0_20px_48px_rgba(38,54,59,0.2)] md:scale-[1.045]">
+              <span className="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-[#b9dce9] text-[#26363b]"><Bath size={25} strokeWidth={1.7} /></span>
+              <h3 className="text-xl font-semibold tracking-[-0.03em] text-white">Banheiros e lavatórios</h3>
+              <p className="mt-3 max-w-xs text-sm leading-6 text-white/75">Cubas, nichos e revestimentos que combinam praticidade, resistência e beleza no dia a dia.</p>
+              <span className="mt-5 border-t border-white/20 pt-4 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#b9dce9]">Qualidade nos acabamentos</span>
+            </article>
+
+            <article className="flex min-h-[300px] flex-col items-center justify-center rounded-2xl border border-[#26363b]/[0.08] bg-white px-7 py-9 text-center shadow-[0_12px_35px_rgba(38,54,59,0.07)] transition duration-300 hover:-translate-y-1">
+              <span className="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-[#e3f0f4] text-[#526e78]"><PanelsTopLeft size={25} strokeWidth={1.7} /></span>
+              <h3 className="text-xl font-semibold tracking-[-0.03em]">Escadas e projetos especiais</h3>
+              <p className="mt-3 max-w-xs text-sm leading-6 text-[#7d8b8f]">Peças feitas para seu ambiente, com atenção aos detalhes e valorização do imóvel.</p>
+              <span className="mt-5 border-t border-[#26363b]/10 pt-4 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#71878f]">Beleza que valoriza</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section id="sobre" className="border-y border-[#26363b]/10 bg-[#f2f6f4]">
         <div className="mx-auto grid max-w-7xl gap-8 px-6 py-16 sm:px-10 md:grid-cols-[0.65fr_1fr] md:items-center md:gap-20 md:py-24">
           <div>
@@ -141,57 +174,6 @@ function Index() {
             <p className="mt-4 text-base leading-8 text-[#65767b]">
               Com atenção aos detalhes e cuidado em cada etapa, ajudamos a dar forma a ambientes que acolhem, inspiram e permanecem.
             </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="servicos" className="bg-[#f2f6f4] px-6 py-20 sm:px-10 md:py-24">
-        <div className="mx-auto max-w-7xl">
-          <div className="mx-auto mb-14 max-w-2xl text-center">
-            <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#82969d]">Pedra Valiosa Marmoraria</p>
-            <h2 className="mt-3 text-4xl tracking-[-0.04em] sm:text-5xl">Serviços que valorizam seu ambiente</h2>
-            <p className="mt-4 text-sm leading-7 text-[#77868a]">Do corte à instalação, cuidado em cada etapa para transformar seu projeto em realidade.</p>
-          </div>
-
-          <div className="grid items-center gap-4 md:grid-cols-3 md:gap-0">
-            <article className="flex min-h-[270px] flex-col items-center justify-center rounded-2xl border border-[#26363b]/[0.07] bg-white px-7 py-9 text-center shadow-[0_12px_35px_rgba(38,54,59,0.06)] transition duration-300 hover:-translate-y-1">
-              <span className="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-[#b9dce9] text-[#26363b]"><ChefHat size={25} strokeWidth={1.7} /></span>
-              <h3 className="text-xl font-semibold tracking-[-0.03em]">Cozinhas em mármore</h3>
-              <p className="mt-3 max-w-xs text-sm leading-6 text-[#879397]">Bancadas, ilhas e espaços gourmet feitos sob medida para sua casa.</p>
-            </article>
-            <article className="relative z-10 flex min-h-[310px] flex-col items-center justify-center rounded-2xl border border-[#a9d4e2] bg-[#b9dce9] px-7 py-10 text-center shadow-[0_18px_45px_rgba(75,126,143,0.2)] md:scale-[1.04]">
-              <span className="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-white text-[#476773]"><Bath size={25} strokeWidth={1.7} /></span>
-              <h3 className="text-xl font-semibold tracking-[-0.03em] text-[#26363b]">Banheiros sofisticados</h3>
-              <p className="mt-3 max-w-xs text-sm leading-6 text-[#49636c]">Cubas, lavatórios e revestimentos que unem beleza e praticidade.</p>
-            </article>
-            <article className="flex min-h-[270px] flex-col items-center justify-center rounded-2xl border border-[#26363b]/[0.07] bg-white px-7 py-9 text-center shadow-[0_12px_35px_rgba(38,54,59,0.06)] transition duration-300 hover:-translate-y-1">
-              <span className="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-[#b9dce9] text-[#26363b]"><PanelsTopLeft size={25} strokeWidth={1.7} /></span>
-              <h3 className="text-xl font-semibold tracking-[-0.03em]">Escadas e projetos especiais</h3>
-              <p className="mt-3 max-w-xs text-sm leading-6 text-[#879397]">Soluções personalizadas em pedras naturais para cada detalhe.</p>
-            </article>
-          </div>
-
-          <div className="mx-auto mb-10 mt-20 max-w-2xl text-center">
-            <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#82969d]">Por que escolher a gente</p>
-            <h2 className="mt-3 text-4xl tracking-[-0.04em] sm:text-5xl">Mais valor em cada detalhe</h2>
-          </div>
-
-          <div className="grid items-center gap-4 md:grid-cols-3 md:gap-0">
-            <article className="flex min-h-[250px] flex-col items-center justify-center rounded-2xl border border-[#26363b]/[0.07] bg-white px-7 py-8 text-center shadow-[0_12px_35px_rgba(38,54,59,0.06)]">
-              <span className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-[#f7edcf] text-[#8a7542]"><Ruler size={23} strokeWidth={1.7} /></span>
-              <h3 className="text-lg font-semibold">Projeto sob medida</h3>
-              <p className="mt-3 max-w-xs text-sm leading-6 text-[#879397]">Cada peça é planejada de acordo com seu espaço e sua necessidade.</p>
-            </article>
-            <article className="relative z-10 flex min-h-[280px] flex-col items-center justify-center rounded-2xl border border-[#d9c991] bg-[#f7edcf] px-7 py-9 text-center shadow-[0_18px_45px_rgba(139,117,66,0.13)] md:scale-[1.04]">
-              <span className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#8a7542]"><ShieldCheck size={23} strokeWidth={1.7} /></span>
-              <h3 className="text-lg font-semibold text-[#4e493b]">Qualidade e confiança</h3>
-              <p className="mt-3 max-w-xs text-sm leading-6 text-[#756d59]">Atenção aos materiais e aos acabamentos em todas as etapas.</p>
-            </article>
-            <article className="flex min-h-[250px] flex-col items-center justify-center rounded-2xl border border-[#26363b]/[0.07] bg-white px-7 py-8 text-center shadow-[0_12px_35px_rgba(38,54,59,0.06)]">
-              <span className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-[#f7edcf] text-[#8a7542]"><Sparkles size={23} strokeWidth={1.7} /></span>
-              <h3 className="text-lg font-semibold">Beleza duradoura</h3>
-              <p className="mt-3 max-w-xs text-sm leading-6 text-[#879397]">Materiais que destacam seu ambiente e valorizam seu imóvel.</p>
-            </article>
           </div>
         </div>
       </section>
