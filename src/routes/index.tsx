@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowUpRight, Gem, Menu, X, ChefHat, Bath, PanelsTopLeft } from "lucide-react";
+import { ArrowUpRight, Gem, Menu, X, ChefHat, Bath, PanelsTopLeft, CalendarDays, MapPin, Users, Award } from "lucide-react";
 import logoBase64 from "./pedra-valiosa-logo.jpg.b64?raw";
 
 export const Route = createFileRoute("/")({
@@ -155,19 +155,69 @@ function Index() {
         </div>
       </section>
 
-      <section id="sobre" className="border-y border-[#26363b]/10 bg-[#f2f6f4]">
-        <div className="mx-auto grid max-w-7xl gap-8 px-6 py-16 sm:px-10 md:grid-cols-[0.65fr_1fr] md:items-center md:gap-20 md:py-24">
-          <div>
-            <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#82969d]">Nossa essência</p>
-            <h2 className="mt-4 text-4xl leading-tight tracking-[-0.04em] sm:text-5xl">A beleza está nos detalhes.</h2>
+      <section id="sobre" className="relative overflow-hidden border-y border-[#26363b]/10 bg-[#fbfcfa] px-6 py-20 sm:px-10 md:py-24">
+        <div className="pointer-events-none absolute -right-24 top-10 h-72 w-72 rounded-full bg-[#b9dce9]/20 blur-3xl" />
+        <div className="relative mx-auto max-w-7xl">
+          <div className="grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
+            <div>
+              <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#82969d]">Nossa história</p>
+              <h2 className="mt-4 max-w-xl text-4xl leading-[1.12] tracking-[-0.045em] sm:text-5xl">
+                Uma trajetória construída com <span className="text-[#91b9c8]">pedra, trabalho e confiança.</span>
+              </h2>
+              <div className="mt-7 max-w-xl space-y-5 text-sm leading-7 text-[#65767b] sm:text-base sm:leading-8">
+                <p>
+                  Fundada em <strong className="font-semibold text-[#26363b]">1999</strong>, a Pedra Valiosa nasceu com a especialidade em mármores e o propósito de transformar ambientes por meio da beleza e da nobreza das pedras naturais.
+                </p>
+                <p>
+                  Ao longo dessa caminhada, crescemos, aprimoramos nossos processos e ampliamos nossa presença. Hoje, contamos com <strong className="font-semibold text-[#26363b]">duas unidades no Brasil</strong> e uma equipe com mais de <strong className="font-semibold text-[#26363b]">100 colaboradores</strong>, trabalhando com dedicação para entregar projetos bem executados.
+                </p>
+                <p>
+                  São mais de 25 anos de experiência, unindo conhecimento, cuidado em cada detalhe e compromisso com a qualidade. Mais do que trabalhar com mármores, queremos fazer parte dos espaços e das histórias de quem confia em nosso trabalho.
+                </p>
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="relative min-h-[340px] overflow-hidden rounded-2xl bg-[#26363b] sm:min-h-[440px]">
+                <img
+                  src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=90"
+                  alt="Ambiente contemporâneo com acabamentos em pedra natural"
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#172327]/75 via-[#172327]/10 to-transparent" />
+                <div className="absolute bottom-7 left-7 right-7 text-white">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#c5e2eb]">Nossa essência</p>
+                  <p className="mt-2 max-w-sm text-3xl font-medium leading-tight tracking-[-0.04em]">Tradição que inspira. Qualidade que permanece.</p>
+                </div>
+              </div>
+              <div className="absolute -bottom-5 right-5 flex items-center gap-3 rounded-xl border border-[#d9e8ed] bg-white px-5 py-4 shadow-[0_14px_35px_rgba(38,54,59,0.12)] sm:-right-4 sm:px-7">
+                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#e3f0f4] text-[#638997]"><Gem size={22} strokeWidth={1.6} /></span>
+                <span>
+                  <span className="block text-2xl font-semibold leading-none tracking-[-0.04em] text-[#26363b]">Desde 1999</span>
+                  <span className="mt-1 block text-[10px] font-medium uppercase tracking-[0.13em] text-[#82969d]">Especialistas em mármores</span>
+                </span>
+              </div>
+            </div>
           </div>
-          <div className="max-w-2xl">
-            <p className="text-base leading-8 text-[#65767b]">
-              Na Pedra Valiosa, cada projeto começa com uma escolha: transformar espaços em ambientes únicos. Trabalhamos para valorizar a beleza dos materiais e entregar acabamentos que fazem sentido para cada projeto.
-            </p>
-            <p className="mt-4 text-base leading-8 text-[#65767b]">
-              Com atenção aos detalhes e cuidado em cada etapa, ajudamos a dar forma a ambientes que acolhem, inspiram e permanecem.
-            </p>
+
+          <div className="mt-20 grid grid-cols-2 gap-y-9 border-t border-[#26363b]/10 pt-10 md:grid-cols-4 md:gap-0">
+            <div className="flex items-start gap-4 border-[#26363b]/10 px-2 md:border-r md:px-7">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#e3f0f4] text-[#638997]"><CalendarDays size={21} strokeWidth={1.6} /></span>
+              <div><p className="text-2xl font-semibold leading-none tracking-[-0.04em] text-[#26363b]">1999</p><p className="mt-2 text-xs leading-5 text-[#829196]">Ano de fundação</p></div>
+            </div>
+            <div className="flex items-start gap-4 border-[#26363b]/10 px-2 md:border-r md:px-7">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#e3f0f4] text-[#638997]"><MapPin size={21} strokeWidth={1.6} /></span>
+              <div><p className="text-2xl font-semibold leading-none tracking-[-0.04em] text-[#26363b]">2 unidades</p><p className="mt-2 text-xs leading-5 text-[#829196]">Presença no Brasil</p></div>
+            </div>
+            <div className="flex items-start gap-4 border-[#26363b]/10 px-2 md:border-r md:px-7">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#e3f0f4] text-[#638997]"><Users size={21} strokeWidth={1.6} /></span>
+              <div><p className="text-2xl font-semibold leading-none tracking-[-0.04em] text-[#26363b]">+100</p><p className="mt-2 text-xs leading-5 text-[#829196]">Colaboradores</p></div>
+            </div>
+            <div className="flex items-start gap-4 px-2 md:px-7">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#e3f0f4] text-[#638997]"><Award size={21} strokeWidth={1.6} /></span>
+              <div><p className="text-2xl font-semibold leading-none tracking-[-0.04em] text-[#26363b]">+25 anos</p><p className="mt-2 text-xs leading-5 text-[#829196]">De experiência</p></div>
+            </div>
           </div>
         </div>
       </section>
