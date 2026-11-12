@@ -37,21 +37,23 @@ function Index() {
 
   return (
     <main className="min-h-screen bg-[#fbfcfa] text-[#26363b] selection:bg-[#fff0bd] selection:text-[#26363b]">
-      <header className="relative z-20 mx-auto flex max-w-7xl items-center justify-between px-6 py-5 sm:px-10">
+      <header className="relative z-20 mx-auto flex max-w-7xl items-center justify-between bg-black px-6 py-5 text-white sm:px-10">
         <a href="#inicio" className="flex items-center gap-3" aria-label="Pedra Valiosa, início">
-          <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#26363b]/20 bg-white">
-            <Gem size={19} strokeWidth={1.5} />
-          </span>
-          <span className="leading-tight">
-            <span className="block font-serif text-[21px] tracking-[-0.04em]">Pedra Valiosa</span>
-            <span className="mt-0.5 block text-[9px] font-semibold uppercase tracking-[0.28em] text-[#718187]">Marmoraria</span>
+          <span className="flex items-center gap-3">
+            <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/30">
+              <Gem size={19} strokeWidth={1.5} />
+            </span>
+            <span className="leading-tight">
+              <span className="block font-serif text-[21px] tracking-[-0.04em] text-white">Pedra Valiosa</span>
+              <span className="mt-0.5 block text-[9px] font-semibold uppercase tracking-[0.28em] text-white/65">Mármores</span>
+            </span>
           </span>
         </a>
 
         <nav className="hidden items-center gap-3 md:flex">
-          <a href="#contato" className="border border-[#26363b]/20 px-5 py-3 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#52646a] transition hover:border-[#26363b] hover:text-[#26363b]">Contato</a>
+          <a href="#contato" className="border border-white/35 px-5 py-3 text-[10px] font-semibold uppercase tracking-[0.14em] text-white/85 transition hover:border-white hover:text-white">Contato</a>
           <a href="#servicos" className="border border-[#26363b]/20 px-5 py-3 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#52646a] transition hover:border-[#26363b] hover:text-[#26363b]">Serviços</a>
-          <a href={whatsapp} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#26363b] px-5 py-3 text-[10px] font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#405b64]">Fale conosco <ArrowUpRight size={14} /></a>
+          <a href={whatsapp} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#d9eaf0] px-5 py-3 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#26363b] transition hover:bg-[#fff0bd]">Fale conosco <ArrowUpRight size={14} /></a>
         </nav>
 
         <button
