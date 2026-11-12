@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowDown, ArrowUpRight, Gem, Menu, X } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Menu, X } from "lucide-react";
+import logoBase64 from "./pedra-valiosa-logo.jpg.b64?raw";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -39,15 +40,11 @@ function Index() {
     <main className="min-h-screen bg-[#fbfcfa] text-[#26363b] selection:bg-[#fff0bd] selection:text-[#26363b]">
       <header className="relative z-20 mx-auto flex max-w-7xl items-center justify-between bg-black px-6 py-5 text-white sm:px-10">
         <a href="#inicio" className="flex items-center gap-3" aria-label="Pedra Valiosa, início">
-          <span className="flex items-center gap-3">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/30">
-              <Gem size={19} strokeWidth={1.5} />
-            </span>
-            <span className="leading-tight">
-              <span className="block font-serif text-[21px] tracking-[-0.04em] text-white">Pedra Valiosa</span>
-              <span className="mt-0.5 block text-[9px] font-semibold uppercase tracking-[0.28em] text-white/65">Mármores</span>
-            </span>
-          </span>
+          <img
+            src={`data:image/jpeg;base64,${logoBase64.trim()}`}
+            alt="Pedra Valiosa Mármores"
+            className="h-auto w-[230px] max-w-[58vw] object-contain sm:w-[290px]"
+          />
         </a>
 
         <nav className="hidden items-center gap-3 md:flex">
