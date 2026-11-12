@@ -24,32 +24,32 @@ export const Route = createFileRoute("/")({
 
 const heroImages = [
   {
-    src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2200&q=90",
-    alt: "Cozinha de alto padrão com ilha e acabamento em pedra natural",
+    src: "https://www.tatjanaplitt.com/app/uploads/2019/10/05.-BeulahInternational_FawknerDisplaySuite_%C2%A9TatjanaPlitt_0358c-1800x1378.jpg",
+    alt: "Ilha e bancada de cozinha em mármore branco com veios cinza bem aparentes",
   },
   {
-    src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2200&q=90",
-    alt: "Sala contemporânea com revestimentos naturais e mármore",
+    src: "https://www.surfacesgalore.com/cdn/shop/articles/architectural-digest-spotlights-latest-design-trends-in-kitchens_1200x675.webp?v=1769776965",
+    alt: "Cozinha de alto padrão com ilha central revestida em mármore natural",
   },
   {
-    src: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=2200&q=90",
-    alt: "Cozinha sofisticada com bancada ampla em pedra",
+    src: "https://www.surfacesgalore.com/cdn/shop/articles/thumbnail_92de8534-3238-4a22-898a-3c265e838f63_1024x576.jpg?v=1765297426",
+    alt: "Ambiente amplo com piso, ilha e paredes em mármore branco",
   },
   {
-    src: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=2200&q=90",
-    alt: "Banheiro elegante com bancada e superfícies em pedra",
+    src: "https://flooritize.com/cdn/shop/collections/Marble-page-banner-top.png?v=1775345609",
+    alt: "Banheiro sofisticado com paredes e revestimentos em mármore",
   },
   {
-    src: "https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=2200&q=90",
-    alt: "Ambiente residencial de luxo com detalhes em mármore",
+    src: "https://www.icestone.com/uploads/Ice-Connect-Marble-Luxurious-open-concept-living-space.webp",
+    alt: "Sala de estar com parede de mármore, piso de pedra e mesa em mármore",
   },
   {
-    src: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2200&q=90",
-    alt: "Interior moderno com materiais naturais e acabamento refinado",
+    src: "https://assets.zyrosite.com/qm5WpfWKjoitnbON/luxury-marble-interior-design-aCnqWrho9HozdQSw.png",
+    alt: "Showroom residencial com grandes placas de mármore nas paredes e no piso",
   },
   {
-    src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2200&q=90",
-    alt: "Projeto de interiores com tons claros e pedra natural",
+    src: "https://www.kaunited.com/Content/uploads/2022880047/202212271539590d2b9b2e0a4a473b9b0f0430d803b35f.jpg",
+    alt: "Projeto de cozinha e banheiro com mármore Arabescato de veios marcantes",
   },
 ];
 
