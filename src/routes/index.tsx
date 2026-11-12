@@ -55,10 +55,10 @@ function Index() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-10 md:flex">
-          <a href="#sobre" className="text-xs font-medium text-[#52646a] transition hover:text-[#26363b]">A marmoraria</a>
-          <a href="#servicos" className="text-xs font-medium text-[#52646a] transition hover:text-[#26363b]">Serviços</a>
-          <a href="#contato" className="inline-flex items-center gap-2 border-b border-[#26363b] pb-1 text-xs font-semibold transition hover:border-[#8aaebd] hover:text-[#718f9a]">Fale conosco <ArrowUpRight size={14} /></a>
+        <nav className="hidden items-center gap-3 md:flex">
+          <a href="#contato" className="border border-[#26363b]/20 px-5 py-3 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#52646a] transition hover:border-[#26363b] hover:text-[#26363b]">Contato</a>
+          <a href="#servicos" className="border border-[#26363b]/20 px-5 py-3 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#52646a] transition hover:border-[#26363b] hover:text-[#26363b]">Serviços</a>
+          <a href={whatsapp} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#26363b] px-5 py-3 text-[10px] font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#405b64]">Fale conosco <ArrowUpRight size={14} /></a>
         </nav>
 
         <button
@@ -75,9 +75,9 @@ function Index() {
       {menuOpen && (
         <nav className="absolute left-0 right-0 z-30 border-y border-[#26363b]/10 bg-[#fbfcfa] px-6 py-5 shadow-sm md:hidden">
           <div className="flex flex-col gap-5 text-sm">
-            <a href="#sobre" onClick={closeMenu}>A marmoraria</a>
+            <a href="#contato" onClick={closeMenu}>Contato</a>
             <a href="#servicos" onClick={closeMenu}>Serviços</a>
-            <a href="#contato" onClick={closeMenu}>Fale conosco</a>
+            <a href={whatsapp} target="_blank" rel="noreferrer" onClick={closeMenu} className="inline-flex items-center justify-center gap-2 bg-[#26363b] px-5 py-3 font-semibold text-white">Fale conosco <ArrowUpRight size={15} /></a>
           </div>
         </nav>
       )}
@@ -89,16 +89,21 @@ function Index() {
             <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#73868c]">Beleza que permanece</p>
           </div>
           <h1 className="font-serif text-[clamp(3.3rem,6vw,5.7rem)] leading-[0.98] tracking-[-0.055em] text-[#26363b]">
-            O detalhe que <span className="italic text-[#7fa9b8]">transforma</span> tudo.
+            Especialista em soluções em <span className="italic text-[#7fa9b8]">mármores e granitos</span> para transformar seus ambientes.
           </h1>
           <p className="mt-7 max-w-md text-[15px] leading-7 text-[#68787d]">
-            A beleza da pedra natural, o cuidado em cada acabamento e soluções feitas para valorizar seus ambientes.
+            Bancadas, cozinhas, banheiros e projetos sob medida com atenção aos detalhes e acabamentos que valorizam cada espaço.
           </p>
-          <div className="mt-9 flex flex-wrap items-center gap-6">
-            <a href="#servicos" className="inline-flex items-center gap-3 bg-[#26363b] px-6 py-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-white transition hover:bg-[#405b64]">
-              Conheça nosso trabalho <ArrowUpRight size={15} />
+          <div className="mt-9 flex flex-wrap items-center gap-3">
+            <a href="#servicos" className="inline-flex items-center gap-3 bg-[#26363b] px-6 py-4 text-[10px] font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#405b64]">
+              Nossos serviços <ArrowUpRight size={15} />
             </a>
-            <a href="#sobre" className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#66777d] underline decoration-[#d7bd75] underline-offset-4 hover:text-[#26363b]">Saiba mais</a>
+            <a href="#contato" className="inline-flex items-center gap-3 border border-[#26363b]/25 px-6 py-4 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#26363b] transition hover:border-[#26363b]">
+              Contato <ArrowUpRight size={15} />
+            </a>
+            <a href={whatsapp} target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 bg-[#fff0bd] px-6 py-4 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#26363b] transition hover:bg-[#f5e3a9]">
+              Fale conosco <ArrowUpRight size={15} />
+            </a>
           </div>
           <div className="mt-14 flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#93a0a3]">
             <ArrowDown size={14} /> Feito para fazer parte da sua história
