@@ -22,36 +22,10 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const heroImages = [
-  {
-    src: "https://www.tatjanaplitt.com/app/uploads/2019/10/05.-BeulahInternational_FawknerDisplaySuite_%C2%A9TatjanaPlitt_0358c-1800x1378.jpg",
-    alt: "Ilha e bancada de cozinha em mármore branco com veios cinza bem aparentes",
-  },
-  {
-    src: "https://www.surfacesgalore.com/cdn/shop/articles/architectural-digest-spotlights-latest-design-trends-in-kitchens_1200x675.webp?v=1769776965",
-    alt: "Cozinha de alto padrão com ilha central revestida em mármore natural",
-  },
-  {
-    src: "https://www.surfacesgalore.com/cdn/shop/articles/thumbnail_92de8534-3238-4a22-898a-3c265e838f63_1024x576.jpg?v=1765297426",
-    alt: "Ambiente amplo com piso, ilha e paredes em mármore branco",
-  },
-  {
-    src: "https://flooritize.com/cdn/shop/collections/Marble-page-banner-top.png?v=1775345609",
-    alt: "Banheiro sofisticado com paredes e revestimentos em mármore",
-  },
-  {
-    src: "https://www.icestone.com/uploads/Ice-Connect-Marble-Luxurious-open-concept-living-space.webp",
-    alt: "Sala de estar com parede de mármore, piso de pedra e mesa em mármore",
-  },
-  {
-    src: "https://pnagroup.ch/assets/service-cozinha-DrlJqZTA.jpg",
-    alt: "Cozinha sofisticada com ilha e backsplash em mármore branco com veios cinza",
-  },
-  {
-    src: "https://www.kaunited.com/Content/uploads/2022880047/202212271539590d2b9b2e0a4a473b9b0f0430d803b35f.jpg",
-    alt: "Projeto de cozinha e banheiro com mármore Arabescato de veios marcantes",
-  },
-];
+const heroImage = {
+  src: "https://images.unsplash.com/photo-1772567733061-f7b44c0587b0?auto=format&fit=crop&fm=jpg&q=90&w=3840&h=2160",
+  alt: "Cozinha contemporânea de alto padrão com ilha central, bancada e backsplash em mármore",
+};
 
 const services = [
   {
@@ -80,7 +54,6 @@ const services = [
 function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [heroOffset, setHeroOffset] = useState(0);
-  const [activeHeroImage, setActiveHeroImage] = useState(0);
 
   useEffect(() => {
     let frame = 0;
@@ -95,17 +68,6 @@ function Index() {
       window.removeEventListener("scroll", handleScroll);
       cancelAnimationFrame(frame);
     };
-  }, []);
-
-  useEffect(() => {
-    heroImages.forEach(({ src }) => {
-      const image = new Image();
-      image.src = src;
-    });
-    const rotation = window.setInterval(() => {
-      setActiveHeroImage((current) => (current + 1) % heroImages.length);
-    }, 4000);
-    return () => window.clearInterval(rotation);
   }, []);
 
   const whatsapp = "https://wa.me/?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20com%20a%20Pedra%20Valiosa%20Marmoraria.";
@@ -163,16 +125,14 @@ function Index() {
       )}
 
       <section id="inicio" className="relative flex min-h-[680px] items-center overflow-hidden bg-[#172327] px-6 py-24 text-left sm:min-h-[740px] sm:px-10 lg:px-16">
-        {heroImages.map((image, index) => (
-          <img
-            key={image.src}
-            src={image.src}
-            alt={image.alt}
-            aria-hidden={index !== activeHeroImage}
-            className={`absolute -top-[12%] left-0 h-[124%] w-full object-cover transition-opacity duration-[1200ms] ease-in-out will-change-opacity ${index === activeHeroImage ? "opacity-100" : "opacity-0 pointer-events-none"}`}
-            style={{ transform: `translate3d(0, ${heroOffset}px, 0) scale(1.08)` }}
-          />
-        ))}
+        <img
+          src={heroImage.src}
+          alt={heroImage.alt}
+          fetchPriority="high"
+          decoding="async"
+          className="absolute -top-[12%] left-0 h-[124%] w-full object-cover"
+          style={{ transform: `translate3d(0, ${heroOffset}px, 0) scale(1.08)` }}
+        />
         <div className="absolute inset-0 bg-[#101a1e]/30" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#101a1e]/75 via-[#101a1e]/35 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#101a1e]/25 via-transparent to-transparent" />
