@@ -37,13 +37,6 @@ function Index() {
 
   return (
     <main className="min-h-screen bg-[#fbfcfa] text-[#26363b] selection:bg-[#fff0bd] selection:text-[#26363b]">
-      <div className="border-b border-[#26363b]/10 bg-[#b9dce9]/45">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#40565d] sm:px-10">
-          <span>Pedra Valiosa · Marmoraria</span>
-          <span>Paraopeba · Minas Gerais</span>
-        </div>
-      </div>
-
       <header className="relative z-20 mx-auto flex max-w-7xl items-center justify-between px-6 py-5 sm:px-10">
         <a href="#inicio" className="flex items-center gap-3" aria-label="Pedra Valiosa, início">
           <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#26363b]/20 bg-white">
