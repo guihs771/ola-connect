@@ -180,8 +180,8 @@ function Index() {
             <div className="relative">
               <div className="relative min-h-[340px] overflow-hidden rounded-2xl bg-[#26363b] sm:min-h-[440px]">
                 <img
-                  src="https://slabwise.com/images/pseo/kitchen-countertop-renovation-timeline-installatio.webp"
-                  alt="Profissional com capacete, óculos e uniforme instalando uma bancada de mármore em cozinha de alto padrão"
+                  src="/images/corte-marmore.jpg"
+                  alt="Corte de uma chapa de pedra com serra durante o trabalho de marmoraria"
                   loading="eager"
                   decoding="async"
                   referrerPolicy="no-referrer"
