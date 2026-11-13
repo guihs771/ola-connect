@@ -180,8 +180,8 @@ function Index() {
             <div className="relative">
               <div className="relative min-h-[340px] overflow-hidden rounded-2xl bg-[#26363b] sm:min-h-[440px]">
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Kitchen_Countertop_Installation_%26_Custom_Stone_Fitting.jpg?20261112"
-                  alt="Instalação e ajuste de uma bancada de pedra em cozinha"
+                  src="https://slabwise.com/images/pseo/kitchen-countertop-renovation-timeline-installatio.webp"
+                  alt="Profissional com capacete, óculos e uniforme instalando uma bancada de mármore em cozinha de alto padrão"
                   loading="eager"
                   decoding="async"
                   referrerPolicy="no-referrer"
